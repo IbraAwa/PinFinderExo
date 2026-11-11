@@ -6,9 +6,6 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# Java
-*.class
-
 # Environnements virtuels
 .venv/
 venv/

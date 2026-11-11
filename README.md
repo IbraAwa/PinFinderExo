@@ -32,23 +32,3 @@ Dans le réseau du cartel se trouvent le compte du chef, *El Jefe*, et un dossie
 Le premier agent à atteindre ce dossier prendra la main sur toute la mission. Ne perdez pas de temps.
 
 *Fin du message.*
-
----
-
-## Vous codez plutôt en Java ?
-
-`PinFinder.java` propose la même mission, mais en Java. L'ouverture du coffre chiffré est déjà gérée (Java ne sait pas lire un zip protégé par mot de passe nativement comme Python, donc le fichier embarque la librairie [zip4j](https://github.com/srikanth-lingala/zip4j) dans `lib/`) : il ne vous reste que l'algorithme à écrire dans `trouverPin`, les quatre boucles imbriquées.
-
-**Compiler et lancer**, depuis ce dossier :
-
-```bash
-# Linux / Mac
-javac -cp lib/zip4j-2.11.6.jar PinFinder.java
-java  -cp "lib/zip4j-2.11.6.jar:." PinFinder
-
-# Windows (cmd / PowerShell)
-javac -cp lib\zip4j-2.11.6.jar PinFinder.java
-java  -cp "lib\zip4j-2.11.6.jar;." PinFinder
-```
-
-Une fois votre algorithme Java qui fonctionne, vous pouvez demander à une IA de le traduire en Python (uniquement les boucles, pas la partie zip) pour compléter `trouver_pin` dans `main.py` : c'est ce fichier qui sert pour la soumission officielle de la mission.
